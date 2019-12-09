@@ -32,6 +32,6 @@ cmd_result = $?
   else
     Dir.chdir(ENV['GITHUB_WORKSPACE']) { JSON.parse(cmd_sysout) }
   end
-@report['__exit_code'] = cmd_result
+@report['__exit_code'] = cmd_result.exit_code
 
 GithubCheckRunService.new(@report, @github_data, ReportAdapter).run
