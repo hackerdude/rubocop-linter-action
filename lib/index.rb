@@ -25,7 +25,10 @@ end
 @rubocop += ' --fail-level ' + ENV['INPUT_FAIL_LEVEL']
 
 cmd_sysout = `#{@rubocop}`
+# Sorry, I'm a purist and $? is well understood without requiring anything.
+# rubocop:disable Style/SpecialGlobalVars
 cmd_result = $?.to_i
+# rubocop:enable Style/SpecialGlobalVars
 @report =
   if ENV['REPORT_PATH']
     read_json(ENV['REPORT_PATH'])
