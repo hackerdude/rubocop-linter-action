@@ -101,7 +101,6 @@
 - tweak the way we read the config file [\#98](https://github.com/andrewmcodes/rubocop-linter-action/pull/98) ([andrewmcodes](https://github.com/andrewmcodes))
 - Enhanced dependency configuration and resolution [\#95](https://github.com/andrewmcodes/rubocop-linter-action/pull/95) ([erichmachado](https://github.com/erichmachado))
 - docs: add erichmachado as a contributor [\#94](https://github.com/andrewmcodes/rubocop-linter-action/pull/94) ([allcontributors[bot]](https://github.com/apps/allcontributors))
-- ReportAdapter\#column\_check correctly parses the last\_column value [\#92](https://github.com/andrewmcodes/rubocop-linter-action/pull/92) ([erichmachado](https://github.com/erichmachado))
 
 ## [v3.0.0.rc2](https://github.com/andrewmcodes/rubocop-linter-action/tree/v3.0.0.rc2) (2019-12-20)
 
@@ -109,6 +108,7 @@
 
 **Merged pull requests:**
 
+- ReportAdapter\#column\_check correctly parses the last\_column value [\#92](https://github.com/andrewmcodes/rubocop-linter-action/pull/92) ([erichmachado](https://github.com/erichmachado))
 - v3.0.0.rc2 release [\#89](https://github.com/andrewmcodes/rubocop-linter-action/pull/89) ([andrewmcodes](https://github.com/andrewmcodes))
 - refactor and update docs [\#88](https://github.com/andrewmcodes/rubocop-linter-action/pull/88) ([andrewmcodes](https://github.com/andrewmcodes))
 - Update build action [\#86](https://github.com/andrewmcodes/rubocop-linter-action/pull/86) ([andrewmcodes](https://github.com/andrewmcodes))
@@ -129,6 +129,7 @@
 
 - The RuboCop version is not respected if there are extra gems [\#67](https://github.com/andrewmcodes/rubocop-linter-action/issues/67)
 - Rubocop action stops the build even when level is set to fatal [\#63](https://github.com/andrewmcodes/rubocop-linter-action/issues/63)
+- Error when building [\#57](https://github.com/andrewmcodes/rubocop-linter-action/issues/57)
 
 **Closed issues:**
 
@@ -166,10 +167,6 @@
 
 - Use bundled version of rubocop instead of latest gems [\#48](https://github.com/andrewmcodes/rubocop-linter-action/issues/48)
 - \[Enhancement\] Add ability to use custom rubocop gem [\#45](https://github.com/andrewmcodes/rubocop-linter-action/issues/45)
-
-**Fixed bugs:**
-
-- Error when building [\#57](https://github.com/andrewmcodes/rubocop-linter-action/issues/57)
 
 **Merged pull requests:**
 
