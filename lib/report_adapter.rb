@@ -65,8 +65,5 @@ class ReportAdapter
       report.dig("__exit_code")
     end
 
-    def status_code(report)
-      report.dig('__exit_code')
-    end
   end
 end
