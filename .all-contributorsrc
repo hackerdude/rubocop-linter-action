@@ -85,11 +85,60 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "hackerdude",
+      "name": "David Martinez",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/30315?v=4",
+      "profile": "http://www.hackerdude.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "excid3",
+      "name": "Chris Oliver",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/67093?v=4",
+      "profile": "http://gorails.com",
+      "contributions": [
+        "review",
+        "ideas"
+      ]
+    },
+    {
+      "login": "erichmachado",
+      "name": "Erich Soares Machado",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/613422?v=4",
+      "profile": "https://github.com/erichmachado",
+      "contributions": [
+        "code",
+        "bug",
+        "test"
+      ]
+    },
+    {
+      "login": "seerahulsingh",
+      "name": "Rahul Singh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4716928?v=4",
+      "profile": "https://github.com/seerahulsingh",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "es50678",
+      "name": "Eduardo Hernandez Soto",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17823824?v=4",
+      "profile": "https://github.com/es50678",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "rubocop-linter-action",
   "projectOwner": "andrewmcodes",
   "repoType": "github",
-  "repoHost": "https://github.com"
+  "repoHost": "https://github.com",
+  "skipCi": true
 }

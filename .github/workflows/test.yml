@@ -12,27 +12,26 @@ jobs:
   test:
     name: Rspec Test Action
     runs-on: ubuntu-latest
+    timeout-minutes: 2
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
     - uses: actions/checkout@master
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby 2.7
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.7.x
+    - uses: actions/cache@v1.1.2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
     - name: Bundle
       run: |
         gem install bundler
+        bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
     - name: Run Rspec
-      run: bin/rspec
-  dispatch:
-    name: Update playground
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Repository Dispatch
-      uses: peter-evans/repository-dispatch@v1
-      with:
-        token: ${{ secrets.DISPATCH_ACCESS_TOKEN }}
-        repository: andrewmcodes/rubocop-linter-action-playground
-        event-type: rubocop-linter-action-test
-        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "actor": "${{ github.actor }}"}'
+      run: bin/test
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
