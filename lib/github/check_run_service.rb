@@ -75,13 +75,15 @@ module Github
     def base_payload(status)
       {
         name: check_name,
-        head_sha: github_data.sha,
+        head_sha: @github_data[:sha],
         status: status
       }
     end
 
     def create_check_payload
-      base_payload("in_progress")
+      base_payload("in_progress").merge!(
+        head_sha: @github_data[:sha]
+      )
     end
 
     def completed_check_payload(started_at)
