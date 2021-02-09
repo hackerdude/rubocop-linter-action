@@ -81,7 +81,7 @@ module Github
 
     def create_check_payload
       base_payload("in_progress").merge!(
-        head_sha: @github_data[:sha]
+        head_sha: github_data.sha
       )
     end
 
