@@ -75,7 +75,6 @@ module Github
     def base_payload(status)
       {
         name: check_name,
-        head_sha: @github_data[:sha],
         status: status
       }
     end
